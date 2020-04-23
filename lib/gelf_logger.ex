@@ -156,7 +156,7 @@ defmodule Logger.Backends.Gelf do
     level = Keyword.get(config, :level)
     metadata = Keyword.get(config, :metadata, [])
     compression = Keyword.get(config, :compression, :gzip)
-    encoder = Keyword.get(config, :json_encoder, Poison)
+    encoder = Keyword.get(config, :json_encoder, Jason)
     tags = Keyword.get(config, :tags, [])
 
     format =
